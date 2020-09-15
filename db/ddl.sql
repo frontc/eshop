@@ -34,3 +34,19 @@ create table t_permission
     creator     long        not null,
     updater     long
 );
+
+drop table if exists t_user_role;
+create table t_user_role
+(
+    user_role_id int primary key auto_increment,
+    user_id int,
+    role_id int
+);
+
+drop table if exists t_role_permission;
+create table t_role_permission
+(
+    role_permission_id int primary key auto_increment,
+    role_id int,
+    permission_id int
+);
